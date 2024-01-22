@@ -3,6 +3,7 @@ public abstract class Item
     protected int value;
     protected String name;
     protected String description;
+    protected boolean isEquipped;
     public Item(String name, String description, int value)
     {
         this.name = name;
@@ -20,6 +21,14 @@ public abstract class Item
     public String getDesc()
     {
         return description;
+    }
+    public void equipItem()
+    {
+        isEquipped = true;
+    }
+    public void dequipItem()
+    {
+        isEquipped = false;
     }
     @Override
     public String toString()
